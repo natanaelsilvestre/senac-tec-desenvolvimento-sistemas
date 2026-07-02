@@ -1,0 +1,128 @@
+Atividade – Documento de requisitos
+
+Responsável: Natanael Silvestre Junior
+Orientação: substitua os itens entre os símbolos < e > por suas respostas. Não se esqueça de que o documento é elaborado para quem vai desenvolver o software.
+Descrição geral do sistema
+O sistema oferecerá soluções em administração para uma clínica veterinária, disponibilizando funcionalidades para as operações cotidianas do estabelecimento, as quais abrangem cadastros, consultas e pagamentos. 
+Descrição geral dos usuários
+Os usuários do sistema dividem-se basicamente em três grupos:
+•	Gerentes – Têm acesso a todas as funcionalidades do sistema e cadastra os outros usuários.
+•	Atendentes – Têm acesso às funcionalidades de cadastro, busca, agendamento de consultas e venda do sistema.
+•	Veterinários – Tem acesso às funcionalidades de registro das consultas e busca.
+Requisitos funcionais
+Informe no mínimo cinco requisitos funcionais. Cada requisito funcional é uma parte do que o cliente deseja que o software faça. Considerando o enunciado, identifique os requisitos funcionais, coloque um nome (que deve ser único), marque os usuários envolvidos e descreva o requisito. Baseie-se no exemplo RF001 para desenvolver os tópicos.
+
+[RF001] Cadastro de animais (Exemplo - não altere)
+Usuário(s): ( ) Gerente | (X) Atendentes | ( ) Veterinários
+Descrição: usuário do sistema consegue criar um cadastro novo ou alterar as informações de um cadastro existente. 
+As informações presentes na ficha criada são: nome, tipo (gato, cachorro, hamster etc.), raça, idade. O tutor responsável pelo animal deve fornecer esses dados no momento do cadastro do animal.
+Para que o cadastro seja concluído, é necessário vincular a ficha do animal a uma ficha de tutor já cadastrada no sistema.
+
+[RF002] Cadastro de Tutores
+Usuário(s): (  ) Gerente | ( X ) Atendentes | ( ) Veterinários
+Descrição: usuário do sistema consegue criar um cadastro novo ou alterar as informações de um cadastro existente. 
+
+As informações da ficha são: nome, cpf, telefone de contato e endereço.
+
+•	Apenas atendentes tem a prerrogativa de cadastrar, alterar e excluir.
+[RF003] Visualizar, Modificar e Agendar Consultas  
+Usuário(s): (  ) Gerente | ( X ) Atendentes | ( ) Veterinários
+Descrição: Acessando com login e senha exclusivo pode fazer agendamento de consultas no sistema, com amplo acesso na agenda da clínica, bem como agenda individual de cada veterinário.
+
+Acesso ao sistema de busca de cadastro no sistema por informações do tutor ou animal.
+
+•	Os campos pertinentes ao atendimento, tratamento e demais informações sobre o decorrer da situação do animal podem ser visualizados sem autorização de modificação/travado pelo sistema.
+
+
+[RF004] Extrato financeiro e gerenciamento de pagamentos.
+Usuário(s): ( ) Gerente | ( X ) Atendentes | ( ) Veterinários
+Descrição: Acesso ao financeiro anexado ao cadastro afim de receber pagamentos (Crédito, Débito, Dinheiro ou Pix). Obrigatório o recebimento em todo atendimento realizado. 
+
+•	O sistema deve gerar a fatura de acordo com o atendimento registrado pelo veterinário, este recurso deve estar estruturado no sistema de modo que o Gerente da clinica consiga gerenciar os produtos e tratamentos oferecidos. 
+
+
+
+
+[RF005] Registro do atendimento e histórico do animal
+Usuário(s): ( ) Gerente | ( ) Atendentes | ( X ) Veterinários
+Descrição: Acessando com login exclusivo, cada veterinário pode atribuir um status referente ao animal com a especificação do diagnostico, doença, tratamento e medicamentos utilizados, bem como a evolução do quadro por meio do registro de atendimento.
+
+Acesso ao sistema de busca de cadastro no sistema por informações do tutor ou animal.
+•	Todas as informações do atendimento deve ser registrada pelo veterinário, bem como o tratamento e evolução.
+
+
+[RF006] Autenticação e Controle de acesso
+Usuário(s): ( X ) Gerente | ( X ) Atendentes | ( X ) Veterinários
+Descrição: O sistema deve permitir acesso somente a usuários autorizados, mediante login e senha individuais. Cada perfil (Gerente, Atendente, Veterinário) terá acesso restrito às funcionalidades de acordo com suas funções. O gerente terá acesso global ao sistema, enquanto atendentes e veterinários terão acesso apenas às funcionalidades correspondentes às suas atribuições.
+
+
+
+
+[RF007] Autenticação e Controle de acesso
+Usuário(s): ( X ) Gerente | (  ) Atendentes | (  ) Veterinários
+Descrição: O gerente poderá cadastrar, editar e excluir usuários internos (atendentes e veterinários), definindo nome, CPF, login e perfil de acesso. 
+
+
+
+
+Requisitos não funcionais
+Informe no mínimo dois requisitos não funcionais. Os requisitos não funcionais são demandas para o software que não são diretamente relacionadas a uma parte específica do que o software será capaz de fazer, e sim relacionadas a como o software será feito. Considerando o enunciado, identifique os requisitos não funcionais, coloque um nome (que deve ser único) e descreva o requisito. Baseie-se no exemplo RNF001 para desenvolver os tópicos.
+
+[RNF001] Computadores (Exemplo - não altere)
+Descrição: As máquinas disponíveis para os funcionários na clínica veterinária são computadores, por isso, o software deve ser um sistema compatível com esse tipo de maquinário.
+
+[RNF002] Rede Local
+Descrição: O sistema deve funcionar em uma rede local, haja visto a instabilidade da internet na região. 
+
+
+
+
+[RNF003] Manutenções do Sistema
+Descrição:  As manutenções do sistema serão realizadas por meio de um técnico em loco. 
+
+
+
+
+Casos de uso
+Selecione dois requisitos funcionais (item 1) e descreva o passo a passo começando do acesso do usuário, passando pelas interações dele e as respostas do sistema até a última tela. Escreva em lista os passos, seguindo uma sequência lógica de ações. Considere questões como: o que é mostrado para o usuário? Quais campos ele preenche e/ou pressiona? Crie pequenas frases que resumem o que será exibido na versão final. Baseie-se no exemplo do Caso de uso 1 para desenvolver os tópicos.
+
+Caso de uso 1 (Exemplo - não altere)
+Identificação do requisito funcional: RF001 - Cadastro de animais
+Passos:
+Usuário acessa o sistema, fornecendo login e senha.
+Sistema exibe uma tela com as opções ‘Marcar consulta’, ‘Novo cadastro’ e ‘Busca’.
+Usuário clica na opção ‘Novo cadastro’.
+Sistema exibe uma tela com as opções ‘Cadastro de animal' e 'Cadastro de tutor’.
+Usuário clica na opção ‘Cadastro de animal’.
+Usuário preenche os campos correspondentes.
+Usuário clica na opção “Avançar”.
+Usuário insere no sistema o número do CPF do tutor.
+Usuário clica na opção “Buscar”.
+Sistema exibe uma lista com apenas um resultado.
+Usuário clica no cadastro apresentado.
+Sistema exibe informações de cadastro do tutor.
+Usuário clica na opção ‘Vincular animal ao tutor’.
+Sistema exibe uma tela de confirmação do cadastro.
+
+Caso de uso 2
+Identificação do requisito funcional: Atendimentos Diários 
+Passos:
+Veterinário acessa o sistema por meio de login e senha individual
+Sistema apresenta atendimentos agendados de modo individualizado por veterinário (Apenas os atendimentos a ele atribuídos).
+Ao clicar em qualquer agendamento o veterinário tem acesso a ficha completo do animal e tutor, bem como histórico de atendimento e evolução de outros tratamentos.
+Veterinário tem acesso a um campo para resumir o atendimento realizando.
+
+
+
+Caso de uso 3
+Identificação do requisito funcional: Cadastro de Novos Usuários internos
+Passos: 
+Gerente acessa o sistema por meio de login e senha
+Sistema apresenta tela de boas vindas com todas as funções descritas para veterinários e atendentes e com a função Gerenciar Usuário Interno, ao clicar neste botão...
+Sistema abre nova tela com barra de busca e nomes de usuários internos e um botão para adicionar novo usuário...
+Ao fazer a busca de um nome e clicando neste o gerente tem acesso as informações de login do usuário em questão bem como a opção de apagar...
+Ao clicar no botão “Novo Usuário”
+O sistema abre nova tela para preenchimento das informações para cadastro, sendo imprescindível o preenchimento das informações para a finalização do mesmo.   
+
+
+•	Todo registro e modificação feito no sistema deve gerar um registro desta contendo horário e autor, apenas o gerente precisa ter acesso a essas informações.  
