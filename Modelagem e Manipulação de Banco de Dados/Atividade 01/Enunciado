@@ -1,0 +1,38 @@
+Contexto
+Uma nova empresa deseja entrar no mercado de filmes sob demanda com um sistema de streaming. Para isso, precisa planejar e estruturar uma base de dados relacional que irá suportar suas operações. Você foi contratado como analista de dados e sua principal responsabilidade é a modelagem do banco de dados. Sua primeira tarefa é desenvolver o Diagrama de Entidade-Relacionamento (DER).
+Algumas informações foram passadas pela empresa para auxiliar na modelagem. A principal funcionalidade desta base de dados é armazenar informações sobre:
+Usuário – o cadastro do usuário será composto pelas seguintes informações:
+ID;
+Nome;
+E-mail;
+CPF;
+Endereço (Chave Estrangeira).
+Endereço – os detalhes sobre o endereço do usuário ficarão separados do cadastro principal:
+ID;
+Rua;
+Número;
+Cidade;
+Estado;
+CEP.
+Conteúdo – os conteúdos cadastrados terão as seguintes informações:
+ID;
+Título;
+Gênero;
+Ano;
+Estúdio (Chave Estrangeira).
+Estúdio – cada conteúdo deve estar associado a um estúdio de produção, que armazena as seguintes informações:
+ID;
+Nome.
+Visualização (n:n) - a empresa deseja manter o registro de visualização dos conteúdos assistidos pelos usuários, sendo assim as informações necessárias são:
+ID;
+Usuário (Chave Estrangeira);
+Conteúdo (Chave Estrangeira);
+Tempo de visualização (em minutos).
+A tabela visualização será criada automaticamente em um relacionamento n para n entre usuário e conteúdo.
+As tabelas precisam respeitar as seguintes regras de negócio:
+O usuário é obrigado a cadastrar um endereço quando cria a sua conta. O usuário só pode ter um único endereço.
+Cada conteúdo só pode ser vinculado a um único estúdio. Um estúdio pode ser vinculado a vários conteúdos diferentes.
+Lembrete: é importante que todos os campos contenham um tipo de dado adequado.
+ 
+Atividade
+Desenvolva, utilizando a interface do MySQL Workbench, um Diagrama ER que represente as principais entidades e seus relacionamentos no sistema de streaming de filmes.
