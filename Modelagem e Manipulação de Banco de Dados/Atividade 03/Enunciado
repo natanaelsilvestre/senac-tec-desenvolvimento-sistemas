@@ -1,0 +1,25 @@
+Contexto:
+Sua empresa foi contratada para desenvolver o banco de dados da TDS Cloud Gaming, o banco de dados já foi criado e povoado, porém surgiu a necessidade de serem criados filtros de buscas mais avançados para mostrar o quão estruturado está o banco. O banco criado e populado tem a seguinte estrutura:
+Usuário: Armazena as informações dos usuários da plataforma.
+Desenvolvedora: Contém os dados das desenvolvedoras de jogos.
+Jogo: Armazena os jogos disponíveis na plataforma, com chave estrangeira para a desenvolvedora.
+Categoria: Representa os diferentes gêneros de jogos.
+JogoCategoria: Tabela de relacionamento N:N entre Jogo e Categoria, permitindo que um jogo tenha várias categorias e vice-versa.
+Biblioteca: Tabela de relacionamento N:N entre Usuário e Jogo, simulando a biblioteca de jogos adquiridos pelos usuários.
+ 
+Com isso em mente foi solicitado que você desenvolva esses filtros utilizando as mais diversas técnicas de MySQL aprendidas até então.
+ 
+Atividade:
+Faça o download do arquivo  Atividade 3 - Criação e População de Dados Clique para obter mais opções   e execute no MySQL Workbench. Com o banco criado e em uso, desenvolva as seguintes queries utilizando a linguagem do MySQL.
+Selecione todos os usuários cadastrados após 01 de março de 2023;
+Selecione todos os jogos com preço superior a 100.00;
+Encontre todas as desenvolvedoras que foram fundadas depois do ano 2000;
+Liste todos os jogos da desenvolvedora "Valve Corporation";
+Calcule o preço médio dos jogos na plataforma;
+Calcule o preço total dos jogos comprados pelo usuário "Carlos Silva";
+Encontre o jogo mais caro da desenvolvedora "Rockstar Games";
+Liste todos os jogos na categoria "RPG";
+Liste todos os usuários e os jogos que eles possuem na biblioteca;
+Encontre o número total de jogos na plataforma desenvolvidos por estúdios dos EUA.
+Dica: Todas essas queries são resolvidas com SELECT, algumas será necessário o uso de JOIN ou outras sub consultas. Avalie primeiro a estrutura do banco no arquivo de povoamento para poder construir as queries de maneira mais precisa.
+ 
