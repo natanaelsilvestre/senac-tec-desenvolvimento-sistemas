@@ -1,0 +1,18 @@
+Contexto:
+Sua empresa foi contratada para desenvolver um sistema para uma associação de kart que promove corridas a nível nacional. O time de analise já fez uma coleta de dados e criou um diagrama ER, assim como um documento PDF com o guia da temporada. Retire dele os dados que devem ser armazenados.
+ 
+Clique para obter mais opções
+ 
+Atividade:
+Dado o digrama, você deve criar o script de criação do banco de dados e realizar algumas manipulações para teste.
+ 
+Desenvolva o script de criação do banco de dados conforme o diagrama ER.
+Crie um script de inserção de dados utilizando as informações disponíveis no PDF.
+Por motivos de licenças que não foram aprovadas a tempo, as etapas de Campo Grande e Londrina precisaram ser alteradas para Salvador e Goiânia, respectivamente, desta forma você precisar atualizar essas informações na tabela Etapa.
+Por questões de investigação a equipe Corredores de Aço precisou rescindir seu contrato com o patrocinador, pois corria o risco de ferir o regulamento nos dispostos éticos, portanto é necessário excluir os dados do patrocinador da base de dados. - OBS: utilize o seguinte comando para desativar o modo segurança para essa sessão, permitindo que você faça updates.
+SET SQL_SAFE_UPDATES = 0;
+Por fim, é necessário exibir os dados dos pilotos.
+ 
+Entrega:
+No espaço dedicado a entregas da atividade, envie o arquivo compactado (rar, zip ou 7z) com os scripts SQL desenvolvidos
+Para realizar esta atividade, baixe o  GUIA DA TEMPORADA DE KART Clique para obter mais opções
